@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const page = async ({ params }: { params: { id: string } }) => {
   const response = await axios.get(
-    `http://localhost:3000/api/pokemons/${params.id}`
+    `https://pokemon-list-kappa-livid.vercel.app/api/pokemons/${params.id}`
   );
   const data: PokemonType = response.data;
 

@@ -12,9 +12,7 @@ export default function Home() {
   useEffect(() => {
     const pokemons = async () => {
       try {
-        const response = await axios.get(
-          `https://pokemon-list-kappa-livid.vercel.app/api/pokemons`
-        );
+        const response = await axios.get(`/api/pokemons`);
         setPokemonList(response.data);
         return response.data;
       } catch (error) {

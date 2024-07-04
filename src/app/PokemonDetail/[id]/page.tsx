@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const page = async ({ params }: { params: { id: string } }) => {
   const response = await axios.get(
-    `https://pokemon-list-kappa-livid.vercel.app/api/pokemons/${params.id}`
+    `http://localhost:3000/api/pokemons/${params.id}`
   );
   const data: PokemonType = response.data;
 
@@ -67,7 +67,7 @@ const page = async ({ params }: { params: { id: string } }) => {
           </div>
           <Link
             href={`/`}
-            className=" border rounded-md px-4 py-2 mt-2 border-green-400"
+            className=" border rounded-md px-4 py-2 mt-2 border-green-400 hover:bg-green-400 hover:text-white"
           >
             뒤로가기
           </Link>

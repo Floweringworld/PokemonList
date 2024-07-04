@@ -14,7 +14,7 @@ const page = async ({ params }: { params: { id: string } }) => {
       <div className="bg-white rounded-2xl w-1/3">
         <div className=" bg-slate-100 flex justify-center items-center flex-col pt-3 pb-3 rounded-t-2xl">
           <p className="font-semibold text-xl">{data.korean_name}</p>
-          <p>No. {data.order}</p>
+          <p>No. {data.id}</p>
         </div>
         <div className="flex  flex-col justify-center items-center  p-10 pt-0">
           <Image

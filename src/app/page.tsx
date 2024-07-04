@@ -15,6 +15,7 @@ export default function Home() {
     queryFn: async () => {
       const response = await axios.get(`/api/pokemons`);
       setPokemonList(response.data);
+      console.log(response.data);
       return response.data;
     },
   });
@@ -35,7 +36,7 @@ export default function Home() {
           className="flex w-64 h-40 flex-col justify-center items-center border rounded-xl hover:border-sky-700"
           href={`PokemonDetail/${pokemon.id}`}
         >
-          <p className=" text-left text-xs">도감 번호 : {pokemon.order}</p>
+          <p className=" text-left text-xs">도감 번호 : {pokemon.id}</p>
           <Image
             src={pokemon.sprites.front_default}
             width={100}
